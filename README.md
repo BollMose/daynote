@@ -1,0 +1,2 @@
+# daynote
+note each day
