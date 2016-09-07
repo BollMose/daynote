@@ -1,6 +1,19 @@
 
 ## 0906
 
+##
+# bitcoin
+- "https://blockchain.info/charts/market-price?timespan=30days&format=json"
+- "https://blockchain.info/stats?format=json"
+
+##
+# appid maybe take effect hours later after creating.
+# 
+"http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&units=imperial"
+"http://api.openweathermap.org/data/2.5/forecast/daily?lat=%f&lon=%f&units=imperial&cnt=7"
+
+# 
+http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=
 
 ##--------
 ## english
