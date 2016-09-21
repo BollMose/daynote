@@ -1,3 +1,13 @@
+
+## 0920
+# octave
+- A(3,2) : always row first, column second
+- subscription is (), not []
+- size(A, 1) == size(A)(1)
+
+# octave
+- cannot show plot: http://stackoverflow.com/questions/35249881/octave-fontconfig-error
+
 ## 0919
 # english
 all associates
