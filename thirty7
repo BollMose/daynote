@@ -1,1 +1,41 @@
 
+### 0922
+## voice
+# voice: disable or enable for a view and its subviews
+ref: http://stackoverflow.com/questions/17897392/how-to-disable-accessibility-for-a-view-including-all-its-subviews
+view.isAccessibilityElement = YES // only focus this view not care about its subviews
+view.isAccessibilityElement = NO  // skip only this view, its subviews can still be voice
+view.accessibilityElementsHidden = YES // hide view and its subviews
+
+# voice: status, global function
+UIAccessibilityIsVoiceOverRunning()
+#beg
+[[NSNotificationCenter defaultCenter] addObserver:self
+                                         selector:@selector(voiceOverStatusChanged)
+                                             name:UIAccessibilityVoiceOverStatusChanged
+                                           object:nil];
+
+- (void)voiceOverStatusChanged
+{
+    if(!UIAccessibilityIsVoiceOverRunning())
+    {
+        //do your changes
+    }
+}
+#end
+
+# voice: frame
+var accessibilityFrame: CGRect
+The frame of the accessibility element, in screen coordinates.
+{ // nil means this window, but I don't know exactly where and when to use this function
+  view.accessibilityFrame = [view convertRect:view.bounds toView: nil] 
+}
+
+# protocol UIAccessibilityFocus
+can control the details 
+
+# change voice item 
+UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.navigationItem.titleView);
+
+## table
+# reload
