@@ -30,6 +30,7 @@ The frame of the accessibility element, in screen coordinates.
 { // nil means this window, but I don't know exactly where and when to use this function
   view.accessibilityFrame = [view convertRect:view.bounds toView: nil] 
 }
+and func UIAccessibilityConvertFrameToScreenCoordinates(CGRect, UIView) maybe better
 
 # protocol UIAccessibilityFocus
 can control the details 
@@ -39,3 +40,14 @@ UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.n
 
 ## table
 # reload
+ref: http://stackoverflow.com/questions/16071503/how-to-tell-when-uitableview-has-completed-reloaddata
+table reload need a while after be called.
+
+# cell will display
+you can get the detail of each including positions
+-(void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath 
+
+##
+# NSNotificationCenter
+need not call removeObserver after iOS9
+ref: https://developer.apple.com/library/content/releasenotes/Foundation/RN-Foundation/index.html#10_11NotificationCenter
