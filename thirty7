@@ -4,6 +4,20 @@
 check the global UIKit functions, including
 func UIApplicationMain
 
+## NSScanner
+ref: http://stackoverflow.com/questions/7944607/how-to-use-nsscanner-to-scan-from-a-string
+
+NSString *theString =@"#chat Hello World"
+NSScanner *theScanner = [NSScanner scannerWithString:theString];
+NSCharacterSet *seperator = [NSCharacterSet characterSetWithCharactersInString:@" "];
+NSString *theText;
+
+while ([theScanner isAtEnd] == NO) {
+    [theScanner scanUpToCharactersFromSet:seperator intoString:&theText];
+    [theScanner setScanLocation: [theScanner scanLocation]+1];
+    NSLog(@"%@",theText);
+}
+
 ## voice
 # 
 @interface NSObject (UIAccessibility)
