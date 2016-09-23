@@ -1,4 +1,24 @@
 
+### 0923
+## UIKit functions
+check the global UIKit functions, including
+func UIApplicationMain
+
+## voice
+# 
+@interface NSObject (UIAccessibility)
+You can find this definition in iOS code, that means NSObject only has those functions,
+N [view conformsToProtocol:@protocol(UIAccessibility)]
+Y [view respondsToSelector:@selector(isAccessibilityElement:)
+
+#
+UIAccessibilityIdentification is an interest protocol 
+and you can set accessibilityID for element,  for any usage you want
+
+# 
+UIAccessibility is protocol 
+UIAccessibilityElement is class
+
 ### 0922
 ## voice
 # voice: disable or enable for a view and its subviews
