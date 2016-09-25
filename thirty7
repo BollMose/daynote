@@ -1,4 +1,26 @@
 
+### 0925
+## CA/sign
+# self-sign
+ref: https://engineering.circle.com/https-authorized-certs-with-node-js-315e548354a2#.a2lcalcpq
+- first of all, you need key-pair as CA authorize, named ca-pair
+- and then generate server key-pair, named server-pair, sign this server-pair with ca-pair
+- even can sign client-pair with ca-pair, that means bi-ca
+- actually you do not sign kai-pair with your own CA, you must apply it to known CA.
+
+## ss
+ssserver -c /etc/shadowsocks.json -d start/stop
+cat /etc/shadowsocks.json 
+{
+    "server":"0.0.0.0",
+    "server_port":7111,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"PASS--",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false
+}
 ### 0923
 ## UIKit functions
 check the global UIKit functions, including
