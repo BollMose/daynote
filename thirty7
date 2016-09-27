@@ -1,3 +1,17 @@
+### 0927
+## ffmpeg
+# convert to alac
+ffmpeg -i input -acodec alac out.m4a
+or
+-c:a alac
+-c:a flac
+
+ref: https://linuxconfig.org/ffmpeg-audio-format-conversions
+### 0926
+
+## Voice
+# while double tap to active element
+view.accessibilityActivate()
 
 ### 0925
 ## CA/sign
