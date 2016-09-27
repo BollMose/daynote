@@ -1,4 +1,12 @@
 ### 0927
+## iOS
+# NSJSONSerialization
+let dic = ["1":"first"] // and can be complecated: Dictionary<String, Any>
+let json = JSONSerialization.data(withJSONObject: dic, options: .prettyPrinted)
+
+that means jsonObject always be a dictionary
+ref: http://stackoverflow.com/questions/29625133/convert-dictionary-to-json-in-swift
+
 ## ffmpeg
 # convert to alac
 ffmpeg -i input -acodec alac out.m4a
