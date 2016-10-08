@@ -1,0 +1,7 @@
+
+## 1007
+# system kernel
+uname -a
+cat /proc/version
+cat /proc/sys/kernel/{ostype,osrelease,version}
+lsb_release -a
