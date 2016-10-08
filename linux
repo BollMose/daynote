@@ -1,10 +1,23 @@
 
 ## 1007
+# raspberry
+default ssh: pi@raspberry
+
+
 # system kernel
 uname -a
 cat /proc/version
 cat /proc/sys/kernel/{ostype,osrelease,version}
 lsb_release -a
+
+#
+rc.local
+systemctl
+sudo systemctl status rc-local.service
+and
+execute by /etc/init.d/rc.local
+and
+check /etc/init.d/skeleton
 
 ## ss
 # 0
@@ -25,4 +38,8 @@ cat /etc/shadowsocks.json
 or 
 nohup ssserver -c /etc/shadowsocks.json > /dev/null 2>&1 &
 # 2
+sudo sslocal -c /etc/shadowsocks.json -d start
+or
+add line to /etc/rc.local
+
 ## 
