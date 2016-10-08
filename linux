@@ -5,3 +5,24 @@ uname -a
 cat /proc/version
 cat /proc/sys/kernel/{ostype,osrelease,version}
 lsb_release -a
+
+## ss
+# 0
+pip install shadowsocks
+# 1
+ssserver -c /etc/shadowsocks.json -d start/stop
+cat /etc/shadowsocks.json 
+{
+    "server":"0.0.0.0",
+    "server_port":7111,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"PASS--",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false
+}
+or 
+nohup ssserver -c /etc/shadowsocks.json > /dev/null 2>&1 &
+# 2
+## 
