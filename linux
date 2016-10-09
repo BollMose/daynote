@@ -1,3 +1,20 @@
+## 1009
+# pcduino8 uno
+issue: cannot push sd/tf card correctly
+default ssh: linaro@linaro
+
+but only one usb interface, no WiFi, no bluetooth, FUCK
+
+# raspberry
+burn image to sd 
+- NOOBS only need copy files to sd, other images need use dd
+- format as FAT32
+- need use sdformatter to format sd card first(oops, it must), 
+- 
+ref:
+http://www.macworld.co.uk/how-to/mac/how-to-set-up-raspberry-pi-3-with-mac-3637490/
+https://www.raspberrypi.org/documentation/installation/sdxc_formatting.md
+https://www.raspberrypi.org/documentation/installation/installing-images/mac.md
 
 ## 1007
 # raspberry
