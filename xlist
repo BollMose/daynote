@@ -10,4 +10,37 @@ filesystem
 sd
 
 ## 
+
+#
 18.大道废有仁义；慧智出有大伪；六亲不和有孝慈；国家昏乱有忠臣
+
+#
+SD: ≤2GB
+SDHC: >2GB - 32GB
+SDXC: >32GB - 2TB
+Class 2、4、6，代表写入速度分别为2MB/s、4MB/s、6MB/s， 还有 Class 10
+如R90/W60代表读写速度达到每秒90MB和60MB
+Class 1 -> U1 -> V10 write 10MBps， U代表UHS
+Class 3 -> U3 -> V30 write 30MBps
+非UHS bus最多支持25MBps（包括读写，显然是读的最高速度）
+UHS-I: bus支持最多104MBps
+UHS-II：bus支持到312MBps
+
+一般视频录制需要的速度：
+普通的卡可以支持720p
+1080p/25bps要求Class 1，U1 60x速度写， 10MBps
+1080p/60bps 4K 要求Class 3, U3, 30MBps
+8K至少要求 60-90MBps
+
+估计，注意是实时的录制，不是后期制作，所以相对高
+对于 720P，认为在4MBps左右，
+1080P则认为是8MBps，30G每小时
+4K由于bps高，估计30MBps，100G每小时
+8K在60MBps， 200G每小时
+#
+都是以cd的150kBps为标准速度，600x的话就是90MB
+DVD的视频480i、576i，而VCD则更小只有352x240
+蓝光：25 50 100 128 GB，
+VCD的视频采用MPEG-1，DVD则是2(ts),蓝光是2/4
+蓝光光盘命名是由于其采用波长405纳米的蓝色激光光束来进行读写操作（DVD采用650纳米波长的红光读写器，CD则是采用780纳米波长的红外线）
+蓝光光盘的英文名称不使用“Blue-ray”的原因，是“Blue-ray Disc”
