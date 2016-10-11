@@ -9,7 +9,13 @@ kickstarter
 filesystem
 sd
 
-## 
+##
+#
+查看某个文件的修改历史
+git log -p -- path/to/file
+git log -- path/to/file
+gitk [filename], // but you install git first, not apple provided, that means apple plant git.
+
 #
 第二十八章 
 知其雄，守其雌，为天下溪；为天下溪，常德不离，复归于婴儿。
