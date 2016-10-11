@@ -15,6 +15,16 @@ sd
 18.大道废有仁义；慧智出有大伪；六亲不和有孝慈；国家昏乱有忠臣
 
 #
+计算H.264的码率：
+[image width] x [image height] x [framerate] x [motion rank] x 0.07 = [desired bitrate]
+1280 x 720 x 24 x 2 x 0.07 = 3,096,576 bps => approximatively 3000 kbps
+1080p 24bps: 7Mbps
+4k(4096 × 3072) 60bps: 70MBps
+
+ref: 
+http://stackoverflow.com/questions/5024114/suggested-compression-ratio-with-h-264
+http://www.adobe.com/content/dam/Adobe/en/devnet/video/articles/h264_primer/h264_primer.pdf
+#
 SD: ≤2GB
 SDHC: >2GB - 32GB
 SDXC: >32GB - 2TB
