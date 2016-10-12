@@ -8,8 +8,22 @@ dd
 kickstarter
 filesystem
 sd
+arduino
 
 ##
+#
+Honeypot
+
+#
+pc -> 串口或usb -> 脉冲发生器（步进控制器） -> 步进电机
+步进电机，Stepping Motor
+伺服电机，Servo motor
+舵机 Servo
+
+42 / 57 / 86 步
+这里包括两个电源，分直流和交流，电压5/12/24
+
+
 #
 查看某个文件的修改历史
 git log -p -- path/to/file
