@@ -12,6 +12,11 @@ arduino
 
 ##
 #
+outlet collection
+if swift, only to []
+
+ref: http://stackoverflow.com/questions/4356612/how-to-make-iboutlets-out-of-an-array-of-objects
+#
 swift  Protocols with Associated Types - PATs
 
 ref: https://www.natashatherobot.com/swift-what-are-protocols-with-associated-types/
