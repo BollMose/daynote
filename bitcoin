@@ -1,0 +1,15 @@
+
+##
+#
+Bitcoin:
+bitcoin:
+
+# 
+blockchain
+
+## known
+挖矿：产生新的bitcoin+交易的手续费，
+每个钱包可以产生多个地址，用于接收bitcoin，
+每一段（我理解）bitcoin都 对应 一个private key，通过这个private key可以计算出bitcoin（不可逆）
+挖矿就是通过算法产生一个合法的一个（一段）数据，并加入到blockchain中，并获得网络（其他参与者）验证认可
+P2P网络，数字签名，
