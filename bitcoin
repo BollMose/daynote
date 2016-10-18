@@ -1,8 +1,19 @@
 ## ques
-我们知道 钱包 的概念 其实是记录所有 收入-支出
+
+一个交易被确认需要的时间和费用？差不过45分钟。但这个结果不是那么确切因为确认的数量越多话费的时间越长，如果用6个确认就可以认为交易成功的话，应该是很快的
+ref: https://www.reddit.com/r/Bitcoin/comments/48m9xq/average_confirmation_times/
+
 一个私钥对应着一些bitcoin，但是这个bitcoin被拆分交易后，又怎么对应呢？
 
 ##
+# 
+a rich account
+ref: https://blockchain.info/address/1933phfhK3ZgFQNLGSDXvqCn32k2buXY8a
+一个交易 是多（地址）对多（地址），包含信息：
+- 双方address，多个
+- Size: 几百bytes（注意，交易收费与长度有关系）
+- Received time:
+
 #
 Bitcoin:
 bitcoin:
@@ -15,6 +26,7 @@ private key
 trade and process
 
 ## known
+我们知道 钱包 的概念 其实是记录所有 收入-支出
 挖矿：产生新的bitcoin+交易的手续费，
 每个钱包可以产生多个地址，用于接收bitcoin，
 每一段（我理解）bitcoin都 对应 一个private key，通过这个private key可以计算出bitcoin（不可逆）
