@@ -1,3 +1,6 @@
+## ques
+我们知道 钱包 的概念 其实是记录所有 收入-支出
+一个私钥对应着一些bitcoin，但是这个bitcoin被拆分交易后，又怎么对应呢？
 
 ##
 #
@@ -6,6 +9,10 @@ bitcoin:
 
 # 
 blockchain
+wallet
+address
+private key
+trade and process
 
 ## known
 挖矿：产生新的bitcoin+交易的手续费，
