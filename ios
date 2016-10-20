@@ -1,0 +1,38 @@
+
+##
+#
+outlet collection
+if swift, only to []
+
+ref: http://stackoverflow.com/questions/4356612/how-to-make-iboutlets-out-of-an-array-of-objects
+#
+swift  Protocols with Associated Types - PATs
+
+ref: https://www.natashatherobot.com/swift-what-are-protocols-with-associated-types/
+#
+swift property: lazy vs initialize-on-demand
+ref: http://stackoverflow.com/questions/25072597/re-initialize-a-lazy-initialized-variable-in-swift/25073176#25073176
+
+#
+instance property
+Type Property: static or class(can override), can get/set, need a default value, because nowhere to init
+
+#
+Stored Properties
+Lazy Stored Properties, only once init, cannot change, need ()
+Computed Properties
+
+#
+observer: willSet/didSet
+read/write: get/set, or read only
+
+# 
+swift: implicitly-unwrapped-optionals
+var xStr:String
+var yStr:String?
+var zStr:String!
+如果是class的属性，xStr必须在某个init初始化， yStr不必初始化， 而zStr可以在某个函数中初始化（如load）——在第一次使用前必须初始化
+yStr和zStr都是同样的类型，optional（见print）， zStr也可赋值为nil，两者的区别是使用的时候看上去少个问号，yStr?.someMethod vs zStr.someMethod（可能崩溃）
+
+ref:
+http://stackoverflow.com/questions/24006975/why-create-implicitly-unwrapped-optionals
