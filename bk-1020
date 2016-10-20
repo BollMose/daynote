@@ -1,0 +1,360 @@
+
+####
+# 1004
+# sent
+Huawei reportedly turned down Google's new phone strategy
+
+## 0930
+# eng
+fuzzy
+most of the time
+discern
+handy
+concur
+semicolon
+combine
+rip
+put into practice
+
+## 0923
+# eng
+Jet Propulsion Laboratory(JPL)
+
+## 0920
+# octave
+- A(3,2) : always row first, column second
+- subscription is (), not []
+- size(A, 1) == size(A)(1)
+
+# octave
+- cannot show plot: http://stackoverflow.com/questions/35249881/octave-fontconfig-error
+
+## 0919
+# eng
+all associates
+during inclement weather or other disruptive events
+
+## 0906
+
+# bitcoin
+- "https://blockchain.info/charts/market-price?timespan=30days&format=json"
+- "https://blockchain.info/stats?format=json"
+
+# appid maybe take effect hours later after creating.
+- "http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&units=imperial"
+- "http://api.openweathermap.org/data/2.5/forecast/daily?lat=%f&lon=%f&units=imperial&cnt=7"
+
+# 
+- http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=
+
+##--------
+## english
+
+
+## quick tip
+
+
+## book
+
+
+## information
+
+
+## music
+
+
+## programs
+
+####
+##
+ls
+nohup
+stdin/stdout/stderror
+kernel and system
+proc
+dd
+kickstarter
+filesystem
+sd
+arduino
+
+##
+#
+身轻言微 
+位高权重
+
+小人物犯小错误，大人物犯大错误
+
+台湾中山大学研究所入学考试作文题目原文： 
+天下国家之事，败于小人者十一，败于君子者十九。 
+盖小人之骨柔，其气馁，其愿欲易售，其营垒亦易破； 
+惟君子之才品自不同，而业已为众所推，其自负也常亢而不肯下。 
+于是为深刻，为褊浅，为执拗，不能舍己从人，以佐国家之急。 
+
+# utf-8
+0x0000-0x007F ASCII, 一个字节， 字节以 0开头
+0x0080-0x07FF 一般字母，两个字节， 第一个字节110开头，第二个字节 10开头
+0x0800-0xFFFF 如中文字符，三个字节， 第一个字节1110开头，之后直接10开头
+其他
+注意： 这儿所说的 到0xFFFF，但是用的是三个字节，也就是说 三个字节的编码 实际上 表示了一个0xFFFF个字符
+
+最关键是 如何分割 字节来识别字符：
+- 字节 0 开头，则是ASCII
+- 字节以 10 开头，则是某个字符的后续部分
+- 自己以 110 开头，则是两个字节表示的字符的第一部分
+- 字节以 1110 开头，则是三个字节表示的字符的第一部分
+
+考虑： 
+两个字节 16位，减去 前缀 110+10， 还有 11 位
+而三个字节 24 位，减去 110+10+10， 还有 17 位，足够容纳 0xFFFF
+
+有一些空白区
+
+unicode是人类字符的一个集合，每个符号都有一个值
+而utf-8编码值并不等于unicode的值，两者之间有一个map，相当于两个table对应
+*我目前看到的规律就是将 utf-8 编码去掉前缀，就是unicode值
+#
+
+#
+outlet collection
+if swift, only to []
+
+ref: http://stackoverflow.com/questions/4356612/how-to-make-iboutlets-out-of-an-array-of-objects
+#
+swift  Protocols with Associated Types - PATs
+
+ref: https://www.natashatherobot.com/swift-what-are-protocols-with-associated-types/
+#
+swift property: lazy vs initialize-on-demand
+ref: http://stackoverflow.com/questions/25072597/re-initialize-a-lazy-initialized-variable-in-swift/25073176#25073176
+#
+instance property
+Type Property: static or class(can override), can get/set, need a default value, because nowhere to init
+
+Stored Properties
+Lazy Stored Properties, only once init, cannot change, need ()
+Computed Properties
+
+observer: willSet/didSet
+read/write: get/set, or read only
+
+# 
+swift: implicitly-unwrapped-optionals
+var xStr:String
+var yStr:String?
+var zStr:String!
+如果是class的属性，xStr必须在某个init初始化， yStr不必初始化， 而zStr可以在某个函数中初始化（如load）——在第一次使用前必须初始化
+yStr和zStr都是同样的类型，optional（见print）， zStr也可赋值为nil，两者的区别是使用的时候看上去少个问号，yStr?.someMethod vs zStr.someMethod（可能崩溃）
+
+ref:
+http://stackoverflow.com/questions/24006975/why-create-implicitly-unwrapped-optionals
+#
+Honeypot
+
+#
+pc -> 串口或usb -> 脉冲发生器（步进控制器） -> 步进电机
+步进电机，Stepping Motor
+伺服电机，Servo motor
+舵机 Servo
+
+42 / 57 / 86 步
+这里包括两个电源，分直流和交流，电压5/12/24
+
+
+#
+查看某个文件的修改历史
+git log -p -- path/to/file
+git log -- path/to/file
+gitk [filename], // but you install git first, not apple provided, that means apple plant git.
+
+#
+第二十八章 
+知其雄，守其雌，为天下溪；为天下溪，常德不离，复归于婴儿。
+知其白，守其黑，为天下式；为天下式，常德不忒，复归于无极。
+知其荣，守其辱，为天下谷。为天下谷；常德乃足，复归于朴。
+朴散则为器，圣人用之，则为官长，故大制不割。
+
+#
+18.大道废有仁义；慧智出有大伪；六亲不和有孝慈；国家昏乱有忠臣
+
+#
+计算H.264的码率：
+[image width] x [image height] x [framerate] x [motion rank] x 0.07 = [desired bitrate]
+1280 x 720 x 24 x 2 x 0.07 = 3,096,576 bps => approximatively 3000 kbps
+1080p 24bps: 7Mbps
+4k(4096 × 3072) 60bps: 70MBps
+
+ref: 
+http://stackoverflow.com/questions/5024114/suggested-compression-ratio-with-h-264
+http://www.adobe.com/content/dam/Adobe/en/devnet/video/articles/h264_primer/h264_primer.pdf
+#
+SD: ≤2GB
+SDHC: >2GB - 32GB
+SDXC: >32GB - 2TB
+Class 2、4、6，代表写入速度分别为2MB/s、4MB/s、6MB/s， 还有 Class 10
+如R90/W60代表读写速度达到每秒90MB和60MB
+Class 1 -> U1 -> V10 write 10MBps， U代表UHS
+Class 3 -> U3 -> V30 write 30MBps
+非UHS bus最多支持25MBps（包括读写，显然是读的最高速度）
+UHS-I: bus支持最多104MBps
+UHS-II：bus支持到312MBps
+
+一般视频录制需要的速度：
+普通的卡可以支持720p
+1080p/25bps要求Class 1，U1 60x速度写， 10MBps
+1080p/60bps 4K 要求Class 3, U3, 30MBps
+8K至少要求 60-90MBps
+
+估计，注意是实时的录制，不是后期制作，所以相对高
+对于 720P，认为在4MBps左右，
+1080P则认为是8MBps，30G每小时
+4K由于bps高，估计30MBps，100G每小时
+8K在60MBps， 200G每小时
+#
+都是以cd的150kBps为标准速度，600x的话就是90MB
+DVD的视频480i、576i，而VCD则更小只有352x240
+蓝光：25 50 100 128 GB，
+VCD的视频采用MPEG-1，DVD则是2(ts),蓝光是2/4
+蓝光光盘命名是由于其采用波长405纳米的蓝色激光光束来进行读写操作（DVD采用650纳米波长的红光读写器，CD则是采用780纳米波长的红外线）
+蓝光光盘的英文名称不使用“Blue-ray”的原因，是“Blue-ray Disc”
+
+####
+## profile: high main baseline
+ffmpeg -i input.mp4 -c:v libx264 -profile:v main -level:v 4.0 -r 25 output.mp4
+
+### 0930
+## audio
+# show waveform
+ref: https://trac.ffmpeg.org/wiki/Waveform
+
+### 0927
+## iOS
+# NSJSONSerialization
+let dic = ["1":"first"] // and can be complecated: Dictionary<String, Any>
+let json = JSONSerialization.data(withJSONObject: dic, options: .prettyPrinted)
+
+that means jsonObject always be a dictionary
+ref: http://stackoverflow.com/questions/29625133/convert-dictionary-to-json-in-swift
+
+## ffmpeg
+# convert to alac
+ffmpeg -i input -acodec alac out.m4a
+or
+-c:a alac
+-c:a flac
+
+ref: https://linuxconfig.org/ffmpeg-audio-format-conversions
+### 0926
+
+## Voice
+# while double tap to active element
+view.accessibilityActivate()
+
+### 0925
+## CA/sign
+# self-sign
+ref: https://engineering.circle.com/https-authorized-certs-with-node-js-315e548354a2#.a2lcalcpq
+- first of all, you need key-pair as CA authorize, named ca-pair
+- and then generate server key-pair, named server-pair, sign this server-pair with ca-pair
+- even can sign client-pair with ca-pair, that means bi-ca
+- actually you do not sign kai-pair with your own CA, you must apply it to known CA.
+
+## ss
+ssserver -c /etc/shadowsocks.json -d start/stop
+cat /etc/shadowsocks.json 
+{
+    "server":"0.0.0.0",
+    "server_port":7111,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"PASS--",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false
+}
+### 0923
+## UIKit functions
+check the global UIKit functions, including
+func UIApplicationMain
+
+## NSScanner
+ref: http://stackoverflow.com/questions/7944607/how-to-use-nsscanner-to-scan-from-a-string
+
+NSString *theString =@"#chat Hello World"
+NSScanner *theScanner = [NSScanner scannerWithString:theString];
+NSCharacterSet *seperator = [NSCharacterSet characterSetWithCharactersInString:@" "];
+NSString *theText;
+
+while ([theScanner isAtEnd] == NO) {
+    [theScanner scanUpToCharactersFromSet:seperator intoString:&theText];
+    [theScanner setScanLocation: [theScanner scanLocation]+1];
+    NSLog(@"%@",theText);
+}
+
+## voice
+# 
+@interface NSObject (UIAccessibility)
+You can find this definition in iOS code, that means NSObject only has those functions,
+N [view conformsToProtocol:@protocol(UIAccessibility)]
+Y [view respondsToSelector:@selector(isAccessibilityElement:)
+
+#
+UIAccessibilityIdentification is an interest protocol 
+and you can set accessibilityID for element,  for any usage you want
+
+# 
+UIAccessibility is protocol 
+UIAccessibilityElement is class
+
+### 0922
+## voice
+# voice: disable or enable for a view and its subviews
+ref: http://stackoverflow.com/questions/17897392/how-to-disable-accessibility-for-a-view-including-all-its-subviews
+view.isAccessibilityElement = YES // only focus this view not care about its subviews
+view.isAccessibilityElement = NO  // skip only this view, its subviews can still be voice
+view.accessibilityElementsHidden = YES // hide view and its subviews
+
+# voice: status, global function
+UIAccessibilityIsVoiceOverRunning()
+#beg
+[[NSNotificationCenter defaultCenter] addObserver:self
+                                         selector:@selector(voiceOverStatusChanged)
+                                             name:UIAccessibilityVoiceOverStatusChanged
+                                           object:nil];
+
+- (void)voiceOverStatusChanged
+{
+    if(!UIAccessibilityIsVoiceOverRunning())
+    {
+        //do your changes
+    }
+}
+#end
+
+# voice: frame
+var accessibilityFrame: CGRect
+The frame of the accessibility element, in screen coordinates.
+{ // nil means this window, but I don't know exactly where and when to use this function
+  view.accessibilityFrame = [view convertRect:view.bounds toView: nil] 
+}
+and func UIAccessibilityConvertFrameToScreenCoordinates(CGRect, UIView) maybe better
+
+# protocol UIAccessibilityFocus
+can control the details 
+
+# change voice item 
+UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.navigationItem.titleView);
+
+## table
+# reload
+ref: http://stackoverflow.com/questions/16071503/how-to-tell-when-uitableview-has-completed-reloaddata
+table reload need a while after be called.
+
+# cell will display
+you can get the detail of each including positions
+-(void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath 
+
+##
+# NSNotificationCenter
+need not call removeObserver after iOS9
+ref: https://developer.apple.com/library/content/releasenotes/Foundation/RN-Foundation/index.html#10_11NotificationCenter
