@@ -1,0 +1,78 @@
+
+##
+# utf-8
+0x0000-0x007F ASCII, 一个字节， 字节以 0开头
+0x0080-0x07FF 一般字母，两个字节， 第一个字节110开头，第二个字节 10开头
+0x0800-0xFFFF 如中文字符，三个字节， 第一个字节1110开头，之后直接10开头
+其他
+注意： 这儿所说的 到0xFFFF，但是用的是三个字节，也就是说 三个字节的编码 实际上 表示了一个0xFFFF个字符
+
+最关键是 如何分割 字节来识别字符：
+- 字节 0 开头，则是ASCII
+- 字节以 10 开头，则是某个字符的后续部分
+- 自己以 110 开头，则是两个字节表示的字符的第一部分
+- 字节以 1110 开头，则是三个字节表示的字符的第一部分
+
+考虑： 
+两个字节 16位，减去 前缀 110+10， 还有 11 位
+而三个字节 24 位，减去 110+10+10， 还有 17 位，足够容纳 0xFFFF
+
+有一些空白区
+
+unicode是人类字符的一个集合，每个符号都有一个值
+而utf-8编码值并不等于unicode的值，两者之间有一个map，相当于两个table对应
+*我目前看到的规律就是将 utf-8 编码去掉前缀，就是unicode值
+
+##
+#
+pc -> 串口或usb -> 脉冲发生器（步进控制器） -> 步进电机
+步进电机，Stepping Motor
+伺服电机，Servo motor
+舵机 Servo
+
+42 / 57 / 86 步
+这里包括两个电源，分直流和交流，电压5/12/24
+
+##
+#
+计算H.264的码率：
+[image width] x [image height] x [framerate] x [motion rank] x 0.07 = [desired bitrate]
+1280 x 720 x 24 x 2 x 0.07 = 3,096,576 bps => approximatively 3000 kbps
+1080p 24bps: 7Mbps
+4k(4096 × 3072) 60bps: 70MBps
+
+ref: 
+http://stackoverflow.com/questions/5024114/suggested-compression-ratio-with-h-264
+http://www.adobe.com/content/dam/Adobe/en/devnet/video/articles/h264_primer/h264_primer.pdf
+
+##
+SD: ≤2GB
+SDHC: >2GB - 32GB
+SDXC: >32GB - 2TB
+Class 2、4、6，代表写入速度分别为2MB/s、4MB/s、6MB/s， 还有 Class 10
+如R90/W60代表读写速度达到每秒90MB和60MB
+Class 1 -> U1 -> V10 write 10MBps， U代表UHS
+Class 3 -> U3 -> V30 write 30MBps
+非UHS bus最多支持25MBps（包括读写，显然是读的最高速度）
+UHS-I: bus支持最多104MBps
+UHS-II：bus支持到312MBps
+
+一般视频录制需要的速度：
+普通的卡可以支持720p
+1080p/25bps要求Class 1，U1 60x速度写， 10MBps
+1080p/60bps 4K 要求Class 3, U3, 30MBps
+8K至少要求 60-90MBps
+
+估计，注意是实时的录制，不是后期制作，所以相对高
+对于 720P，认为在4MBps左右，
+1080P则认为是8MBps，30G每小时
+4K由于bps高，估计30MBps，100G每小时
+8K在60MBps， 200G每小时
+
+#
+都是以cd的150kBps为标准速度，600x的话就是90MB
+DVD的视频480i、576i，而VCD则更小只有352x240
+蓝光：25 50 100 128 GB，
+VCD的视频采用MPEG-1，DVD则是2(ts),蓝光是2/4
+蓝光光盘命名是由于其采用波长405纳米的蓝色激光光束来进行读写操作（DVD采用650纳米波长的红光读写器，CD则是采用780纳米波长的红外线）
+蓝光光盘的英文名称不使用“Blue-ray”的原因，是“Blue-ray Disc”
