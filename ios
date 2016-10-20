@@ -1,3 +1,106 @@
+### 0926
+
+## Voice
+# while double tap to active element
+view.accessibilityActivate()
+
+### 0927
+## iOS
+# NSJSONSerialization
+let dic = ["1":"first"] // and can be complecated: Dictionary<String, Any>
+let json = JSONSerialization.data(withJSONObject: dic, options: .prettyPrinted)
+
+that means jsonObject always be a dictionary
+ref: http://stackoverflow.com/questions/29625133/convert-dictionary-to-json-in-swift
+
+
+
+### 0923
+## UIKit functions
+check the global UIKit functions, including
+func UIApplicationMain
+
+## NSScanner
+ref: http://stackoverflow.com/questions/7944607/how-to-use-nsscanner-to-scan-from-a-string
+
+NSString *theString =@"#chat Hello World"
+NSScanner *theScanner = [NSScanner scannerWithString:theString];
+NSCharacterSet *seperator = [NSCharacterSet characterSetWithCharactersInString:@" "];
+NSString *theText;
+
+while ([theScanner isAtEnd] == NO) {
+    [theScanner scanUpToCharactersFromSet:seperator intoString:&theText];
+    [theScanner setScanLocation: [theScanner scanLocation]+1];
+    NSLog(@"%@",theText);
+}
+
+## voice
+# 
+@interface NSObject (UIAccessibility)
+You can find this definition in iOS code, that means NSObject only has those functions,
+N [view conformsToProtocol:@protocol(UIAccessibility)]
+Y [view respondsToSelector:@selector(isAccessibilityElement:)
+
+#
+UIAccessibilityIdentification is an interest protocol 
+and you can set accessibilityID for element,  for any usage you want
+
+# 
+UIAccessibility is protocol 
+UIAccessibilityElement is class
+
+### 0922
+## voice
+# voice: disable or enable for a view and its subviews
+ref: http://stackoverflow.com/questions/17897392/how-to-disable-accessibility-for-a-view-including-all-its-subviews
+view.isAccessibilityElement = YES // only focus this view not care about its subviews
+view.isAccessibilityElement = NO  // skip only this view, its subviews can still be voice
+view.accessibilityElementsHidden = YES // hide view and its subviews
+
+# voice: status, global function
+UIAccessibilityIsVoiceOverRunning()
+#beg
+[[NSNotificationCenter defaultCenter] addObserver:self
+                                         selector:@selector(voiceOverStatusChanged)
+                                             name:UIAccessibilityVoiceOverStatusChanged
+                                           object:nil];
+
+- (void)voiceOverStatusChanged
+{
+    if(!UIAccessibilityIsVoiceOverRunning())
+    {
+        //do your changes
+    }
+}
+#end
+
+# voice: frame
+var accessibilityFrame: CGRect
+The frame of the accessibility element, in screen coordinates.
+{ // nil means this window, but I don't know exactly where and when to use this function
+  view.accessibilityFrame = [view convertRect:view.bounds toView: nil] 
+}
+and func UIAccessibilityConvertFrameToScreenCoordinates(CGRect, UIView) maybe better
+
+# protocol UIAccessibilityFocus
+can control the details 
+
+# change voice item 
+UIAccessibilityPostNotification(UIAccessibilityScreenChangedNotification, self.navigationItem.titleView);
+
+## table
+# reload
+ref: http://stackoverflow.com/questions/16071503/how-to-tell-when-uitableview-has-completed-reloaddata
+table reload need a while after be called.
+
+# cell will display
+you can get the detail of each including positions
+-(void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath 
+
+##
+# NSNotificationCenter
+need not call removeObserver after iOS9
+ref: https://developer.apple.com/library/content/releasenotes/Foundation/RN-Foundation/index.html#10_11NotificationCenter
 
 ##
 #
