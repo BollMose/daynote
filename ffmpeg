@@ -1,0 +1,18 @@
+
+## ffmpeg
+# convert to alac
+ffmpeg -i input -acodec alac out.m4a
+or
+-c:a alac
+-c:a flac
+
+ref: https://linuxconfig.org/ffmpeg-audio-format-conversions
+
+## profile: high main baseline
+ffmpeg -i input.mp4 -c:v libx264 -profile:v main -level:v 4.0 -r 25 output.mp4
+
+### 0930
+## audio
+# show waveform
+ref: https://trac.ffmpeg.org/wiki/Waveform
+
