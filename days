@@ -9,6 +9,10 @@ Step:
 ques: 
 - do not use MYApp.ipa or MYApp.app
 - 
+
+related: 
+- strip
+- file
 ref: 
 http://stackoverflow.com/questions/1460892/symbolicating-iphone-app-crash-reports
 https://possiblemobile.com/2015/03/symbolicating-your-ios-crash-reports/
