@@ -1,4 +1,17 @@
+### 1124
+# symbolicatecrash
+Step: 
+- Create a folder put three files ("MYApp.ipa", "MyApp.app.dSYM", "MYApp_2013-07-18.crash") in it.
+- export DEVELOPER_DIR="/Applications/Xcode.app/Contents/Developer"
+- symbolicatecrash MYApp_2013-07-18.crash
+- or symbolicatecrash -v MYApp_2013-07-18.crash MyApp.app.dSYM
 
+ques: 
+- do not use MYApp.ipa or MYApp.app
+- 
+ref: 
+http://stackoverflow.com/questions/1460892/symbolicating-iphone-app-crash-reports
+https://possiblemobile.com/2015/03/symbolicating-your-ios-crash-reports/
 ### 1104
 
 #
