@@ -2,6 +2,12 @@
 # open i2c, serial
 raspi-config
 
+# pins for i2c, close to sd/tf card, 
+pin 1: vcc, 3.3v
+pin 3: sda
+pin 5: sdl
+pin 9: GND
+
 #
 ls /dev/i2c*
 i2cdetect -y 1
