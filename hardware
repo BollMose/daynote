@@ -1,0 +1,16 @@
+
+#
+ls /dev/i2c*
+i2cdetect -y 1
+i2cdump -y 1 0x40
+
+# sht2x:  0x60
+# Si7021: 0x40
+
+# py
+https://github.com/jaques/sht21_python
+smbus-cffi
+https://github.com/ControlEverythingCommunity/SI7021
+
+
+
