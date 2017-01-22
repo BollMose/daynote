@@ -1,4 +1,7 @@
 
+# open i2c, serial
+raspi-config
+
 #
 ls /dev/i2c*
 i2cdetect -y 1
