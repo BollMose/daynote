@@ -1,3 +1,6 @@
+# view 
+dmesg | grep tty
+
 
 # open i2c, serial
 raspi-config
