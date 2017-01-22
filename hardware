@@ -1,6 +1,13 @@
 # view 
 dmesg | grep tty
 
+# steps for serial
+/dev/ttyAMA0 is default for blue tooth
+/dev/ttyS0 is the miniUART
+/dev/serial0 and /dev/serial1
+modify /boot/cmdline.txt or execute raspi-config
+disable serial
+
 
 # open i2c, serial
 raspi-config
